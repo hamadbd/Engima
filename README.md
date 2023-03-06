@@ -1,13 +1,9 @@
-# Engima
+In this example, we start by defining a function download_and_convert_image that can download an image from a URL and convert it to a NumPy array. This function will be used later to read live data.
 
-In this example, we use TensorFlow and Keras to build a neural network that can classify images from the CIFAR-10 dataset, which consists of 50,000 training images and 10,000 test images of 32x32 pixel size.
+Next, we load and preprocess the CIFAR-10 dataset as before, and define the neural network architecture and compilation as well.
 
-We start by loading the data and preprocessing it by scaling the pixel values to a range between 0 and 1, and converting the labels to one-hot encoded vectors.
+Then, we define a new function predict_from_live_data that continuously reads live data from the URL https://picsum.photos/200 and makes predictions using the trained model. In this case, we are simply using a random image generator provided by picsum.photos, but you can substitute this with any other data source.
 
-Next, we define the neural network architecture, which consists of three convolutional layers with max pooling, followed by a fully connected layer and a softmax output layer.
+Finally, we train the model on the CIFAR-10 dataset as before, and call the predict_from_live_data function to start making predictions from live data.
 
-We then compile the model using the Adam optimizer and categorical cross-entropy loss, and train it on the training set for 10 epochs with a batch size of 32.
-
-Finally, we evaluate the performance of the model on the test set by computing the loss and accuracy, which are printed to the console.
-
-This example demonstrates how Enigma AI can be used to build sophisticated models that can learn complex patterns in large datasets and make accurate predictions.
+This example demonstrates how Enigma AI can be used to make predictions in real-time using live data from free open sources.
